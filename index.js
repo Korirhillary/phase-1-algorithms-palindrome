@@ -1,25 +1,32 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let polishedString = word;
+  let reversedString = polishedString.split("").reverse().join("");
+    console.log(polishedString,reversedString);
+    if (reversedString === polishedString) {
+     return true; }
+     if (polishedString != reversedString) {
+     return false;
 }
+ }
 
-/* 
-  Add your pseudocode here
+/* initialize empty array called result
+divides the original string argument into array of its elements
+revese the sequence and compare with each item in the input array:
+  if element is a number:
+    push item onto result
+    
+  the function divides the original string argument into array of its elements
+  it then reverses the second array and joins the elements to form a second string
+  it finally tests whether the second string is an exact copy of the original string
 */
-
-/*
-  Add written explanation of your solution here
-*/
-
-// You can run `node index.js` to view these console logs
 if (require.main === module) {
-  // add your own custom tests in here
+  console.log("momononomom");// my own custom test
   console.log("Expecting: true");
   console.log("=>", isPalindrome("racecar"));
-
   console.log("");
-
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+  return;
 }
 
 module.exports = isPalindrome;
